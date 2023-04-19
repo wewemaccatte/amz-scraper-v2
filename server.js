@@ -2,8 +2,8 @@ const puppeteer = require('puppeteer');
 const http = require('http');
 const url = require('url');
 const querystring = require('querystring');
-
-const server = http.createServer(async (req, res) => {
+const port = process.env.PORT || 3000;
+const app = http.createServer(async (req, res) => {
   const { pathname, query } = url.parse(req.url);
   const params = querystring.parse(query);
 
@@ -82,6 +82,6 @@ const server = http.createServer(async (req, res) => {
   await browser.close();
 });
 
-server.listen(3000, () => {
-  console.log('Server in ascolto sulla porta 3000');
+app.listen(port, () => {
+  console.log(`Server in ascolto sulla porta ${port}`);
 });
