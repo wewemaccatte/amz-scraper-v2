@@ -2,9 +2,9 @@
   "name": "amazon-scraper-v3",
   "version": "1.0.0",
   "description": "TOP SCRAPER 2024",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "build": "echo 'Nothing to build'",
     "export": "echo 'Nothing to export'"
   },
